@@ -196,7 +196,7 @@ function tabMove(e) { // id로 하는 이유는 일관성때문이다. 굳이 �
 $nav.onclick = (e) => {
     
     if ( !e.target.matches('.nav > li')) return;
-    tabMove();
+    tabMove(e);
 }
 
 // $nav.onclick = tabMove(e.target.id);
