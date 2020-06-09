@@ -198,5 +198,3 @@ $nav.onclick = (e) => {
     if ( !e.target.matches('.nav > li')) return;
     tabMove(e);
 }
-
-// $nav.onclick = tabMove(e.target.id);
