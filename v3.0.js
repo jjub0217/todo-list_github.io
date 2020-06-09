@@ -171,7 +171,6 @@ $clearCompleted.onclick = (e) => {  // completed 값이 true인(체크된) 모�
 
 
 function tabMove(e) { // id로 하는 이유는 일관성때문이다. 굳이 타겟으로 할필요가 없다. <- 왜지? 이해안되서 안고쳤다.
-    if ( !e.target.matches('.nav > li')) return;
     [...$nav.children].forEach($navItem => {
       if ($navItem === e.target) // 내가 클릭한게 타겟임. 
       {
@@ -194,11 +193,10 @@ function tabMove(e) { // id로 하는 이유는 일관성때문이다. 굳이 �
     });
 }
 
-// $nav.onclick = (e) => {
-//     console.log(e);
+$nav.onclick = (e) => {
     
-//     if ( !e.target.matches('.nav > li')) return;
-//     tabMove();
-// }
+    if ( !e.target.matches('.nav > li')) return;
+    tabMove();
+}
 
-$nav.onclick = tabMove();
+// $nav.onclick = tabMove(e.target.id);
